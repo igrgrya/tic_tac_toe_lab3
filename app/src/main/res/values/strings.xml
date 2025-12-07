@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TicTacToeLab_3_4</string>
+    <string name="preference_file_key">com.example.tictactoelab_3_4.file_key</string>
+</resources>
