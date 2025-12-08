@@ -87,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/btn_back"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:layout_marginTop="300dp"
         style="@style/ButtonStyle"
         app:layout_constraintEnd_toEndOf="parent"
