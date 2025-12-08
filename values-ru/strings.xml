@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_start_game">Начать</string>
+    <string name="btn_settings">Настройки</string>
+    <string name="tv_settings">Настройки</string>
+    <string name="tv_volume">Громкость</string>
+    <string name="tv_language">Язык</string>
+    <string name="cb_ru">Русский</string>
+    <string name="cb_eng">Английский</string>
+    <string name="btn_back">Назад</string>
+    <string name="tv_won">выиграл!</string>
+    <string name="tv_draw">Ничья!</string>
+    <string name="tv_turn">ход</string>
+    <string name="btn_finish">Закончить</string>
+</resources>

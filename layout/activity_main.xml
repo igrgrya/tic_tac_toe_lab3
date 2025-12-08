@@ -24,7 +24,8 @@
         android:layout_height="71dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/shape_rounded_container"
-        android:text="Start Game"
+        style="@style/ButtonStyle"
+        android:text="@string/btn_start_game"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,11 +36,13 @@
         android:layout_width="278dp"
         android:layout_height="71dp"
         android:layout_marginTop="30dp"
-        android:text="Settings"
+        style="@style/ButtonStyle"
+        android:text="@string/btn_settings"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_start_new_game" />
+
 
 
 

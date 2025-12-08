@@ -1,4 +1,16 @@
 <resources>
-    <string name="app_name">TicTacToeLab_3_4</string>
-    <string name="preference_file_key">com.example.tictactoelab_3_4.file_key</string>
+    <string name="app_name" translatable="false">TicTacToeLab_3_4</string>
+    <string name="preference_file_key" translatable="false">com.example.tictactoelab_3_4.file_key</string>
+    <string name="btn_start_game">Start Game</string>
+    <string name="btn_settings">Settings</string>
+    <string name="tv_settings">Settings</string>
+    <string name="tv_volume">Volume</string>
+    <string name="tv_language">Language</string>
+    <string name="cb_ru">Ru</string>
+    <string name="cb_eng">Eng</string>
+    <string name="btn_back">Back</string>
+    <string name="tv_won">won!</string>
+    <string name="tv_draw">Draw!</string>
+    <string name="tv_turn">turn</string>
+    <string name="btn_finish">Finish</string>
 </resources>

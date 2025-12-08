@@ -12,8 +12,6 @@ import com.example.tictactoelab_3_4.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var mediaPlayer: MediaPlayer
-
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -8,13 +8,14 @@
     tools:context=".GameActivity"
     android:background="@color/beige_bg">
 
-    <Button
+   <Button
         android:id="@+id/btn_finish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Finish"
+        android:text="@string/btn_finish"
+        style="@style/ButtonStyle"
         android:textSize="40sp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -35,11 +36,12 @@
             android:src="@drawable/ic_x" />
 
         <TextView
+            style="@style/TextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:text="turn"
-            android:textSize="40sp" />
+            android:text="@string/tv_turn"
+            android:textSize="50sp" />
 
     </LinearLayout>
 

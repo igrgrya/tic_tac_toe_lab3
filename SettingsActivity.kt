@@ -16,7 +16,22 @@ class SettingsActivity : AppCompatActivity() {
 
         binding = ActivitySettingsBinding.inflate(layoutInflater)
 
-        val data = getSettingsInfo()
+        val savedLang = getSavedLang()
+        updateCheckboxes(savedLang)
+
+        binding.cbRu.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                binding.cbEng.isChecked = false
+                changeLanguage("ru")
+            }
+        }
+
+        binding.cbEng.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                binding.cbRu.isChecked = false
+                changeLanguage("en")
+            }
+        }
 
         binding.soundBar.progress = (MusicPlayer.getVolume() * 100).toInt()
 
@@ -36,17 +51,35 @@ class SettingsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
     }
-    private fun updateSoundValue(progress: Int){
-        with(getSharedPreferences(getString(R.string.preference_file_key), MODE_PRIVATE).edit()){
-            putInt("sound_progress", progress)
-            apply()
+    private fun changeLanguage(lang: String) {
+        saveLang(lang)
+
+        val locales = LocaleListCompat.forLanguageTags(lang)
+        AppCompatDelegate.setApplicationLocales(locales)
+    }
+
+    private fun updateCheckboxes(lang: String) {
+        when (lang) {
+            "ru" -> {
+                binding.cbRu.isChecked = true
+                binding.cbEng.isChecked = false
+            }
+            "en" -> {
+                binding.cbRu.isChecked = false
+                binding.cbEng.isChecked = true
+            }
         }
     }
-    private fun getSettingsInfo(): Int{
-        with(getSharedPreferences(getString(R.string.preference_file_key), MODE_PRIVATE)){
-            val soundProgress = getInt("soundProgress", 0)
-            return soundProgress
-        }
 
+    private fun saveLang(lang: String) {
+        getSharedPreferences("settings", MODE_PRIVATE)
+            .edit()
+            .putString("lang", lang)
+            .apply()
+    }
+
+    private fun getSavedLang(): String {
+        return getSharedPreferences("settings", MODE_PRIVATE)
+            .getString("lang", "en") ?: "en"
     }
 }
