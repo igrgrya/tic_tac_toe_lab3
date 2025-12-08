@@ -190,15 +190,15 @@ class GameActivity : AppCompatActivity() {
         when(status){
             PLAYER_0_WIN -> {
                 image.setImageResource(R.drawable.ic_o)
-                text.text = "won!"
+                text.text = getString(R.string.tv_won)
             }
             PLAYER_X_WIN -> {
                 image.setImageResource(R.drawable.ic_x)
-                text.text = "won!"
+                text.text = getString(R.string.tv_won)
             }
             DRAW -> {
                 image.visibility = GONE
-                text.text = "draw!"
+                text.text = getString(R.string.tv_draw)
             }
         }
 
